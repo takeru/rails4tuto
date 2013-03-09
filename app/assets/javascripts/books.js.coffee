@@ -2,6 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
+  console.log "books.js#init"
   $('#new_search_form').on 'ajax:success', (e, books) ->
     console.log books
     $('tr.book').hide()
