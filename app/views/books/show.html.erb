@@ -10,6 +10,10 @@
   <%= @book.price %>
 </p>
 
+<p>
+  <strong>Published on:</strong>
+  <%= @book.published_on %>
+</p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
