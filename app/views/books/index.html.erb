@@ -1,3 +1,8 @@
+<%= form_for @search_form, url: books_path, html: {method: :get} do |f| %>
+  <%= f.search_field :q %>
+  <%= f.submit "検索" %>
+<% end %>
+
 <h1>Listing books</h1>
 
 <table>
