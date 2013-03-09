@@ -1,4 +1,4 @@
-<%= form_for @search_form, url: books_path, html: {method: :get} do |f| %>
+<%= form_for @search_form, url: books_path(format: :json), remote: true, html: {method: :get} do |f| %>
   <%= f.search_field :q %>
   <%= f.submit "検索" %>
 <% end %>
@@ -18,8 +18,7 @@
   </thead>
 
   <tbody>
-    <% @books.each do |book| %>
-    <tr>
+    <%= content_tag_for :tr, @books do |book| %>
       <td><%= book.title %></td>
       <td><%= book.price %></td>
       <td><%= book.published_on %></td>
