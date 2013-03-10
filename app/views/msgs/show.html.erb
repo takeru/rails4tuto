@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @msg.room %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @msg.sender %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @msg.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_msg_path(@msg) %> |
+<%= link_to 'Back', msgs_path %>

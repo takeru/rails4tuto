@@ -1,0 +1,16 @@
+
+<%= form_for(@msg, :remote=>true) do |f| %>
+  <%= f.hidden_field :room %>
+  <p>Sender:<%= f.text_field :sender %></p>
+  <p>Body:<%= f.text_area :body %></p>
+  <p><%= f.submit "Send" %></p>
+<% end %>
+
+
+<div id="live_msgs">
+</div>
+
+<div>
+room: <span id="room"><%= @room %></span><br />
+debug: <span id="debug">(debug)</span><br />
+</div>

@@ -1,0 +1,31 @@
+<h1>Listing msgs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Sender</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @msgs.each do |msg| %>
+    <tr>
+      <td><%= msg.room %></td>
+      <td><%= msg.sender %></td>
+      <td><%= msg.body %></td>
+      <td><%= link_to 'Show', msg %></td>
+      <td><%= link_to 'Edit', edit_msg_path(msg) %></td>
+      <td><%= link_to 'Destroy', msg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Msg', new_msg_path %>

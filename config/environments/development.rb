@@ -24,4 +24,10 @@ Rails4tuto::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  # for streaming
+  config.preload_frameworks = true
+  config.allow_concurrency  = true
+  config.dependency_loading = false
+  config.cache_classes      = true
 end

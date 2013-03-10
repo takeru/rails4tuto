@@ -3,6 +3,12 @@ Rails4tuto::Application.routes.draw do
 
   root 'books#index'
 
+  resources :msgs do
+    collection do
+      get 'chat'
+      get 'watch'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
