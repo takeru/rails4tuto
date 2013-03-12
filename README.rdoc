@@ -1,4 +1,7 @@
-http://enigmatic-crag-3019.herokuapp.com/
+http://rails4-takeru.herokuapp.com
+
+http://rails4-takeru.herokuapp.com/msgs/chat?room=room1
+
 
 == README
 
